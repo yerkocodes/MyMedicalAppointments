@@ -7,11 +7,17 @@ public class Doctor {
 	String speciality;
 	
 	//Constructor
-	Doctor() {
+	public Doctor() {
 		printText("Construtendo el Objeto Doctor");
-		id++;
 	}
 	
+	public Doctor(String name, String speciality) {
+		printText("El nombre del Doctor asignado es: " + name);
+		id++;
+		this.name = name;
+		this.speciality = speciality;
+	}
+
 	//Comportamientos o metodos
 	
 	public void showName() {
