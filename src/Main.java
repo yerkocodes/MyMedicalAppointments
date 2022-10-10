@@ -9,9 +9,15 @@ public class Main {
 //		showMenu();
 		
 		Doctor myDoctor = new Doctor("Maria", "Dentista");
-		printText(myDoctor.name);
-		printText(myDoctor.speciality);
+		printText(myDoctor.getName());
+		printText(myDoctor.getSpeciality());
 		
+		Patient patient = new Patient("Alejandra", "alejandra@email.com");
+		patient.setWeight(54.5);
+		System.out.println(patient.getWeight());
+		patient.setPhoneNumber("12345678");
+		
+
 	}
 
 }

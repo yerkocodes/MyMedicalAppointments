@@ -1,12 +1,12 @@
 import static Utilidades.Utilidades.*;
 
 public class Doctor {
-	// Atributos
-	static int id; // autoincrement
-	String name;
-	String speciality;
+	// Attributes
+	public static int id; // autoincrement
+	private String name;
+	private String speciality;
 	
-	//Constructor
+	//Constructor method
 	public Doctor() {
 		printText("Construtendo el Objeto Doctor");
 	}
@@ -18,14 +18,36 @@ public class Doctor {
 		this.speciality = speciality;
 	}
 
-	//Comportamientos o metodos
-	
+	// Methods
 	public void showName() {
 		printText(name);
 	}
 	
 	public void showId() {
 		printText("ID Doctor: " + id);
+	}
+
+	// Getters & Setters
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getSpeciality() {
+		return speciality;
+	}
+
+	public void setSpeciality(String speciality) {
+		this.speciality = speciality;
+	}
+
+	// To String 
+	@Override
+	public String toString() {
+		return "Doctor [name=" + name + ", speciality=" + speciality + "]";
 	}
 
 }
